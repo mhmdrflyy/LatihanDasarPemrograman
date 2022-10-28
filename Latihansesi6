@@ -1,26 +1,44 @@
+print("----------- Latihan 6 - Muhammad Rafly -----------")
 
-print("==========Program Nilai==========")
+print("\n======================================================")
+print("=========== Program menentukan Grade Nilai ===========")
+print("======================================================")
 
-nilai = int(input("masukan nilai anda : "))
+nama = input("\nMasukan nama Mahasiswa : ")
+nilai = input("Inputkan nilai akhir   : ")
 
-if nilai >= 90:
-    grade = "A"
-    predikat = "Dengan Pujian"
-elif nilai >= 80:
-    grade = "B"
-    predikat = "Sangat Memuaskan"
-elif nilai >= 70:
-    grade = "B"
-    predikat = "Memuaskan"
-elif nilai >= 60:
-    grade = "C"
-    predikat = "Tidak memuaskan"
-elif nilai <= -1:
-    grade = "Nilai yang dimasukan tidak ada dalam data"
-    predikat = "Tidak ada dalam data"
+if (nilai.isnumeric() == True):
+    nilai_int = int(nilai)
+    
+    if nilai_int >= 101:
+        grade = "Tidak ada dalam data Nilai karena angka terlalu tinggi"
+        predikat = "Tidak ada"
+    elif nilai_int >= 90:
+        grade = "A"
+        predikat = "Dengan Pujian"
+
+    elif nilai_int >= 80:
+        grade = "B"
+        predikat = "Sangat Memuaskan"
+
+    elif nilai_int >= 70:
+        grade = "C"
+        predikat = "Memuaskan"
+
+    elif nilai_int >= 60:
+        grade = "D"
+        predikat = "Tidak Memuaskan"
+
+    elif nilai_int >= 0:
+        grade = "E"
+        predikat = "Tidak Lulus"
+
+    print("\n------------------------")
+    print("Nama Mahasiswa : ", nama)
+    print("Grade Anda     : ", grade)
+    print("Predikat Anda  : ", predikat)
+
 else:
-    grade = "E"
-    predikat = "Tidak Lulus"
+    print("\nMaaf input anda salah, mohon masukan nilai dengan angka!!")
 
-print("Grade:  %s" %grade)
-print("Predikat: %s  " %predikat)
+print("\n======================================================")
